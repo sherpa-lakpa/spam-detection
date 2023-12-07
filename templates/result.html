@@ -7,7 +7,14 @@
 </head>
 <body>
     <h1>Prediction Result</h1>
-    <p>The email is {{ prediction }}.</p>
+    <h2>The email is "{{prediction}}"</h2>
+    {% if prediction=="spam" %}
+        <img src="{{ url_for('static', filename='images/spam.png') }}" />
+    {% else %}
+        <img src="{{ url_for('static', filename='images/ham.png') }}" />
+    {% endif %}
+    <br>
+    <br>
     <a href="/">Go back</a>
 </body>
 </html>
