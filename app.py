@@ -4,7 +4,10 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 import joblib
 import string
+import nltk
 from nltk.corpus import stopwords
+
+nltk.download('stopwords')
 
 # function to remove punctuation and stopwords
 def text_process(text):
