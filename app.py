@@ -6,6 +6,8 @@ import joblib
 import string
 from nltk.corpus import stopwords
 
+app = Flask(__name__)
+
 # function to remove punctuation and stopwords
 def text_process(text):
     non_punc = [char for char in text if char not in string.punctuation]
@@ -35,5 +37,5 @@ def predict():
         # Display the result on the result page
         return render_template('result.html', prediction=prediction[0])
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
