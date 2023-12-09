@@ -4,11 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Spam Classifier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: inline-block;
+        }
+        textarea {
+            width: 100%;
+            margin-top: 10px;
+        }
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
     <h1>Email Spam Classifier</h1>
     <form action="/predict" method="post">
-        <label for="email_text">Enter email text:</label>
+        <label for="email_text">Enter email text:</label><br>
         <textarea name="email_text" rows="4" cols="50"></textarea><br>
         <input type="submit" value="Predict">
     </form>
